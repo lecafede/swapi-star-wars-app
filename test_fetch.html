@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul class="posts">
+       
+
+    </ul>
+
+
+    <script>
+
+    const url = 'https://jsonplaceholder.typicode.com/photos';
+
+    
+    function getPhotos() {
+        
+        fetch(url).then(response => {
+            
+            return response.json()})
+            .then(result => console.log(result.splice(0, 20)))
+            
+
+        
+
+        }
+    getPhotos();
+
+
+
+    // async function getResponse() {
+    //     let response = await fetch(url)
+    //     let content = await response.json()
+    //     content = content.splice(0, 10)
+
+
+    //     let list = document.querySelector('.posts')
+       
+
+
+    //     content.forEach((element) => {
+            
+    //         list.innerHTML += ` <li class="post">
+    //         <h4>${element.title}</h4>
+    //         <img src="${element.url}" width="300">
+    //     </li>`
+    //     });
+        
+    // }
+
+    // getResponse()
+    
+    </script>
+    
+</body>
+</html>
